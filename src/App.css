@@ -16,6 +16,18 @@ body {
   background-repeat: no-repeat;
 }
 
+.headline {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 0;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  position: sticky; /* hamesha top pe rahega */
+  top: 0;
+  z-index: 1000;
+}
+
 
 main{
   height:100%;

@@ -9,6 +9,7 @@ import "prismjs/themes/prism-tomorrow.css";
 import prism from "prismjs";
 import "./App.css";
 
+
 export default function App() {
   //code write and edite on problem statement
   const [code, setCode] = useState(`  function sum(){ return 1 + 1 ; } `);
@@ -26,9 +27,9 @@ export default function App() {
   async function reviewCode() {
     try {
       setLoading(true); // loading start
-      const response = await axios.post("https://reviewx-backend.onrender.com/ai/get-review", {
-        code,
-      });
+      const response = await axios.post("https://reviewx.onrender.com/ai/get-review", {
+  code,
+});
       setReview(response.data);
     } catch (error) {
       setReview("Error fetching review");
@@ -38,7 +39,18 @@ export default function App() {
     }
   }
 
+ 
   return (
+    <>
+    {/* Headline strip instead of Navbar */}
+
+      <div className="headline">
+        <marquee behavior="scroll" direction="left">
+          🚀 ReviewX: An AI-powered Code Review Tool | Write Code ✍️ | Get
+          Instant AI Feedback ⚡ | Improve Smarter! 💡
+        </marquee>
+      </div>
+      
     <main>
       <div className="left">
         <div className="code">
@@ -75,5 +87,8 @@ export default function App() {
         )}
       </div>
     </main>
+    </>
   );
 }
+
+
