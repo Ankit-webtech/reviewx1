@@ -27,9 +27,15 @@ export default function App() {
   async function reviewCode() {
     try {
       setLoading(true); // loading start
+<<<<<<< HEAD
       const response = await axios.post("https://reviewx.onrender.com/ai/get-review", {
   code,
 });
+=======
+     const response = await axios.post("https://reviewx.onrender.com/ai/get-review", {
+      code,
+   });
+>>>>>>> a4dbbaf604fe3f778610c42e73c5d85db89febdc
       setReview(response.data);
     } catch (error) {
       setReview("Error fetching review");
